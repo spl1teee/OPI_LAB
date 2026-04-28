@@ -1,0 +1,75 @@
+* { box-sizing: border-box; font-family: Arial, sans-serif; }
+body { margin: 0; background: #f7f2ed; color: #2f241c; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 16px; }
+.card { background: #fff; border: 1px solid #e3d8ce; border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.between { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+button { background: #8b7355; color: #fff; border: 0; border-radius: 8px; padding: 8px 12px; cursor: pointer; }
+button.secondary { background: #fff; color: #8b7355; border: 1px solid #8b7355; }
+button.danger { background: #b42318; }
+input, select { padding: 8px; border-radius: 8px; border: 1px solid #ccb9a8; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { border-bottom: 1px solid #eee; padding: 8px; text-align: left; vertical-align: top; }
+.tabs { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+.tab { background: #ede2d7; color: #4a3728; }
+.tab.active { background: #4a3728; color: #fff; }
+.hidden { display: none; }
+.muted { color: #7a6b60; font-size: 12px; }
+.badge { padding: 3px 8px; border-radius: 99px; font-size: 12px; border: 1px solid #d8c9bc; background: #faf8f5; }
+.badge.red { background: #fef3f2; border-color: #fecdca; color: #b42318; }
+.badge.green { background: #ecfdf3; border-color: #abefc6; color: #067647; }
+.login { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+.login .card { width: 360px; }
+.ok { color: #067647; }
+.err { color: #b42318; }
+.cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin: 12px 0 8px;
+  font-weight: 700;
+  color: #6d5a4c;
+}
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+.cal-day {
+  min-height: 120px;
+  border: 1px solid #e3d8ce;
+  border-radius: 8px;
+  padding: 8px;
+  background: #fff;
+}
+.cal-day.empty {
+  background: transparent;
+  border-style: dashed;
+}
+.cal-day-head {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.cal-events {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.cal-event {
+  font-size: 12px;
+  border: 1px solid #d8c9bc;
+  border-radius: 6px;
+  padding: 4px 6px;
+  background: #faf8f5;
+}
+.cal-event.active {
+  border-color: #abefc6;
+  background: #ecfdf3;
+}
+@media (max-width: 900px) { .grid-3 { grid-template-columns: 1fr; } }
+@media (max-width: 900px) {
+  .calendar-grid, .cal-weekdays {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
